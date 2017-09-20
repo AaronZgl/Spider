@@ -24,15 +24,17 @@
 # 5.使用
  `1.创建BeautifulSoup对象` 
 
+```python
     # 导入BeautifulSoup包
     from bs4 import BeautifulSoup
         
     # 创建BeautifulSoup对象
     soup = BeautifulSoup(html, 'html.parser' from_encoding = 'utf-8')
-
+```
 
 `2.搜索节点（find_all, find）`
 
+```python
     # 寻找div节点
     node = soup.find_all('div')
         
@@ -41,10 +43,11 @@
         
     # 寻找所有内容为p，class属性为a的div节点
     node = soup.find_all('div', class='a', string='p')
-
+```
   
  `3.访问节点信息`
 
+```python
      # 获得节点的标签名称
      name = node.name
      
@@ -53,10 +56,12 @@
      
      # 获得节点的文本内容
      text = node.get_text()
+```
 
 # 6.实例
  `代码`
 
+```python
         # -*- coding: utf-8 -*-
         
         # 导入包
@@ -95,7 +100,8 @@
             print node['href']
         for node in p_nodes:
             print node.get_text()
-        
+```
+ 
 
   [1]: https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html
 
